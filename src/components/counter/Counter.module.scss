@@ -1,0 +1,46 @@
+.counter {
+  width: 300px;
+  justify-content: center;
+  text-align: center;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  padding: 15px;
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #556581;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.05s ease-in-out;
+  color: #fff;
+  &.minus_btn {
+    background-color: #e63946;
+    border: 1px solid darken(#e63946, 15%);
+    box-shadow: 0 4px 0 darken(#e63946, 10%);
+  }
+  &.plus_btn {
+    background-color: #2a9d8f;
+    border: 1px solid darken(#2a9d8f, 15%);
+    box-shadow: 0 4px 0 darken(#2a9d8f, 10%);
+  }
+  &:hover {
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+}
