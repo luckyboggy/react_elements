@@ -12,6 +12,10 @@
   justify-content: center;
   text-align: center;
 }
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
 .overlay {
   position: absolute;

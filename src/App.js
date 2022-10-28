@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Modal from './components/modal/Modal';
 import './index.scss';
 
 function App() {
@@ -7,24 +8,7 @@ function App() {
   return (
     <div className="App">
       <button onClick={() => setModalVisible(true)} className='modal_open_btn'>Открыть окно</button>
-      {
-        modalVisible && (<div className='overlay'>
-          <div className="modal">
-            <div className="modal_header">
-              <div className="modal_title">модальное окно</div>
-              <div onClick={() => setModalVisible(false)} className="modal_close">&times;</div>
-            </div>
-            <div className='modal_content'>
-              <svg>
-                <title />
-                <path />
-              </svg>
-            </div>
-
-          </div>
-        </div>)
-      }
-
+      <Modal modalVisible={modalVisible} setModalVisible={setModalVisible} />
     </div>
   );
 }
