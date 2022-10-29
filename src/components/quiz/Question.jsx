@@ -15,7 +15,10 @@ const Question = ({ questions, question, onClickVariant, step }) => {
       <img src={question.flag} className="img_flag" />
       <ul>
         {question.variants.map((variant, index) => (
-          <li key={variant} onClick={() => onClickVariant(index)}>
+          <li
+            key={variant}
+            onClick={(e) => onClickVariant(index, e)}
+          >
             {variant}
           </li>
         ))}

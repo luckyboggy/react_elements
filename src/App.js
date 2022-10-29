@@ -60,13 +60,29 @@ const questions = [
 function App() {
   const [step, setStep] = useState(0);
   const [count, setCount] = useState(0);
+  const [clicked, setClicked] = useState(false);
   const question = questions[step];
+  
 
-  const onClickVariant = (index) => {
+  const onClickVariant = (index, e) => {
     if (question.correct === index) {
-      setCount(count + 1);
+      console.log(e.target);
+      e.target.style.border = "2px solid rgba(1, 180, 36, 0.518)";
+      e.target.style.backgroundColor = "rgba(1, 180, 36, 0.05)";
+      if (!clicked){
+        setCount(count + 1);
+        setClicked(true);
+      }
+      
+    } else {
+      e.target.style.border = "2px solid rgba(255, 2, 2, 0.518)";
+      e.target.style.backgroundColor = "rgba(255, 2, 2, 0.05)";
     }
-    setTimeout(() => { setStep(step + 1) }, 250);
+    
+    setTimeout(() => {
+      setClicked(false);
+      setStep(step + 1)
+    }, 300);
   }
 
   return (
