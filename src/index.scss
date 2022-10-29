@@ -25,6 +25,7 @@ body {
   padding: 40px;
   position: relative;
   background-color: #fff;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -32,8 +33,8 @@ body {
     width: 150px;
   }
   .img_flag {
-    width: 200px;
-    height: 133px;
+    width: 250px;
+    height: 165px;
     border-radius: 5px;
     margin-bottom: 10px;
   }
@@ -90,5 +91,13 @@ body {
         border: 2px solid rgba(0, 0, 0, 0.4);
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .question,
+  .result {
+    width: 96%;
+    top: 30px;
   }
 }
