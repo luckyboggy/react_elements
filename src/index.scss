@@ -33,21 +33,24 @@ body {
   }
   .img_flag {
     width: 200px;
+    height: 133px;
     border-radius: 5px;
     margin-bottom: 10px;
   }
 
   button {
-    background-color: #fff;
+    background-color: #f12d2d;
+    color: #fff;
     padding: 15px 30px;
     margin-bottom: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border: 2px solid #f12d2d;
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 600;
     margin-top: 10px;
-    &:hover {
-      border: 2px solid rgba(0, 0, 0, 0.4);
+    &:active {
+      background-color: #e52a2a;
     }
   }
 
@@ -61,7 +64,7 @@ body {
       height: 100%;
       border-radius: 30px;
       margin-bottom: 30px;
-      width: 50%;
+      width: 0%;
       transition: all 0.3s ease-in-out;
       background: linear-gradient(
         90deg,

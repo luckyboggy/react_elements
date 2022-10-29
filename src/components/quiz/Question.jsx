@@ -1,18 +1,24 @@
 import React from "react";
 
-const Question = ({ question }) => {
+const Question = ({ questions, question, onClickVariant, step }) => {
+  const progressPersent = Math.round((step / questions.length) * 100);
+
   return (
     <div className="question">
       <div className="progress">
-        <div className="progress__inner"></div>
+        <div
+          style={{ width: `${progressPersent}%` }}
+          className="progress__inner"
+        ></div>
       </div>
       <h2>Угадай страну по флагу</h2>
       <img src={question.flag} className="img_flag" />
       <ul>
-        <li>{question.variants[0]}</li>
-        <li>{question.variants[1]}</li>
-        <li>{question.variants[2]}</li>
-        <li>{question.variants[3]}</li>
+        {question.variants.map((variant, index) => (
+          <li key={variant} onClick={() => onClickVariant(index)}>
+            {variant}
+          </li>
+        ))}
       </ul>
     </div>
   );
