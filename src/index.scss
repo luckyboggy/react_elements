@@ -90,6 +90,13 @@ body {
       &:hover {
         border: 2px solid rgba(0, 0, 0, 0.4);
       }
+      .correct {
+        border: 2px solid rgba(2, 255, 15, 0.518);
+      }
+
+      .incorrect {
+        border: 2px solid rgba(255, 2, 2, 0.518);
+      }
     }
   }
 }

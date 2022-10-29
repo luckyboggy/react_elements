@@ -74,7 +74,7 @@ function App() {
       {
         step !== questions.length
           ? (<Question questions={questions} question={question} onClickVariant={onClickVariant} step={step} />)
-          : (<Result count={count} questions={questions}/>)
+          : (<Result count={count} questions={questions} />)
 
       }
     </div>
